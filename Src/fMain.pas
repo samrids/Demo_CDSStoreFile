@@ -4,12 +4,10 @@ interface
 
 uses
 
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
-  System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  Data.DB, Datasnap.DBClient, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Grids,
-  Vcl.DBGrids, Vcl.DBCtrls, Vcl.Mask,
-  FoodClasses, Vcl.ComCtrls;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, ComCtrls, DBCtrls,FoodClasses,
+  Dialogs, DB, DBClient, StdCtrls, ExtCtrls, Grids, DBGrids, Mask;
+
 
 type
   TForm1 = class(TForm)
@@ -76,7 +74,6 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  ReportMemoryLeaksOnShutdown := True;
   // Create food dataset.
   Foods := TFoods.create(ClientDataSet1, ExtractFilePath(Application.exename) +
     'Foods.xml'); // Foods := TFoods.create(ClientDataSet1, '');
