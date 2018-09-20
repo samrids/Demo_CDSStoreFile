@@ -3,18 +3,12 @@ unit FoodClasses;
 interface
 
 {
-  VER150 = Delphi 7.1
-  VER310 = Delphi XE10.1 Berlin
-
   About class
   TFoodCategories: food categories data
   TFoods:  foods data
 }
 uses
-{$IFDEF VER150} Forms, classes, sysutils, dbclient, db{$ENDIF}
-{$IFDEF VER310} Vcl.Forms, System.classes, System.sysutils, DataSnap.dbclient,
-  Data.db{$ENDIF}
-    ;
+  Forms, classes, SysUtils, DBClient, DB;
 
 type
 
